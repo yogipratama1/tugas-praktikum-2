@@ -1,0 +1,75 @@
+1. insert data anggota dengan tahun lahir , 2000 
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('2','akhnan','akhnan@gmail.com','jember','08190740937','1996-07-21')
+    -> ;
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('5','iwan','iwan@gmail.com','SBY','08190740937','1994-07-21');
+Query OK, 1 row affected (0.06 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('6','ipul','ipul@gmail.com','bogor','08190740657','1999-02-27');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('7','upil','upil@gmail.com','bandung','0819074845','1998-12-26');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('8','upin','upin@gmail.com','MLY','08190748453','1990-11-24');
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('9','ipin','ipin@gmail.com','MLY','08190748493','1990-11-24');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('9','ipin','ipin@gmail.com','MLY','08190748493','1990-11-24');
+ERROR 1062 (23000): Duplicate entry '9' for key 'PRIMARY'
+MariaDB [praktikum_pbd_1]> insert into anggota values('10','apin','apin@gmail.com','Makasar','081907484067','1991-03-27');
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('11','alfa','alfa@gmail.com','banyuwangi','08190748437','1995-04-29');
+Query OK, 1 row affected (0.10 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('12','midi','midi@gmail.com','lumajang','08190908437','1999-05-29');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('13','indo','indo@gmail.com','JKT','0819090849823','1989-05-29');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('14','grosir','grosir@gmail.com','JKT','081909084989','1992-06-25');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('15','rian','rian@gmail.com','KLMTN','081909063756','1997-07-27');
+Query OK, 1 row affected (0.25 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('16','petrik','petrik@gmail.com','KLMTN','081909001948','1998-09-20');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('17','ramlan','ramlan@gmail.com','KLMTN','081909000957','1998-10-30');
+Query OK, 1 row affected (0.07 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('18','amin','amin@gmail.com','donomulyo','0819090901029','1996-07-30');
+Query OK, 1 row affected (0.84 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('19','adi','adi@gmail.com','donomulyo','08190909098','1999-05-12');
+Query OK, 1 row affected (0.70 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('20','ida','ida@gmail.com','donomulyo','081909090358','1999-06-12');
+Query OK, 1 row affected (0.06 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('21','amer','amer@gmail.com','kalipakem','081909029035','2002-01-12');
+Query OK, 1 row affected (0.09 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('22','raffle','rapel@gmail.com','Inggris','0819091023','2003-02-13');
+Query OK, 1 row affected (0.35 sec)
+
+MariaDB [praktikum_pbd_1]> insert into anggota values('23','rival','rival@gmail.com','pakis','08190993853','2004-07-13');
+Query OK, 1 row affected (0.08 sec)
+
+MariaDB [praktikum_pbd_1]>
+
+
+
+2. tampilkan data anggota yang memiliki umur di bawah 18 tahun dan lebih dari sama dengan 15
+	# menghitung usia = update anggota set usia= YEAR(CURDATE()) - YEAR(tagl_lahir);
+	# menampilkan umur di bawah 18 dan >= 15 = select * from anggota where usia<'18' and usia>='15';
+
+3. menampilkan umur maksimum dari anggota
+	select max(usia) from anggota;
